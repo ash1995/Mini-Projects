@@ -13,4 +13,5 @@ app.set('view engine', 'ejs');
 var server = http.createServer(app);
 app.listen(3005);
 
-app.get('/', routes);
+app.get('/*', routes);
+app.post('/save', routes);

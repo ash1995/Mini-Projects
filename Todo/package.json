@@ -1,7 +1,10 @@
 {
-	"name" : "Todo",
-	"version" : "1.0.0",
-	"scripts" : {
-		"start": "node app.js"
-	}
+  "name": "Todo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "redis": "^2.7.1"
+  }
 }

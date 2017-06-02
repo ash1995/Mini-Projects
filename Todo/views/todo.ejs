@@ -5,6 +5,29 @@
     </head>
 
     <body>
-        Page under construction.
+        <h1><b>New Todo List</b></h1>
+        <form>
+            Enter a new item: <input type="text" id="item" placeholder="New Todo"><br>
+            <input type="submit" value="Save" onclick="updateTodoList()">
+        </form>
+
+        <h2> List of Todos </h2>
+        <ul>
+            <% for (var i = 0; i < todos.length; i++) { %>
+                <li> <%= todos[i].text %></li>
+            <% } %>
+        </ul>
+
+        <script type="text/javascript">
+            function updateTodoList() {
+                var item = document.getElementById('item').value;
+                alert('hi ' + item);
+                $.post('/save', {
+                    item : item
+                }, function (res) {
+
+                });
+            }
+        </script>
     </body>
 </html>
