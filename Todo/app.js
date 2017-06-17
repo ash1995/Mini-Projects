@@ -4,8 +4,12 @@
 var express = require('express');
 var http = require('http');
 var routes = require('./routes/index.js');
+var bodyParser = require('body-parser');
 
 var app = express();
+
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');

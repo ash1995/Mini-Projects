@@ -28,8 +28,8 @@ router.get('/todo', function (req, res) {
 
 router.post('/save', function (req, res, next) {
     var newTodo = {};
-    console.log(req);
-    newTodo.name = req.body['item'];
+    console.log(req.body);
+    newTodo.name = req.body.item;
     newTodo.id = newTodo.name.replace(" ", "-");
     client.hset("Todo", newTodo.id, newTodo.name);
     res.redirect('/todo');

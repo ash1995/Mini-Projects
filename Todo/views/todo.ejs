@@ -6,9 +6,9 @@
 
     <body>
         <h1><b>New Todo List</b></h1>
-        <form>
-            Enter a new item: <input type="text" id="item" placeholder="New Todo"><br>
-            <input type="submit" value="Save" onclick="updateTodoList()">
+        <form name = "todoForm" action="/save" method="post">
+            Enter a new item: <input type="text" name="item" id="item" placeholder="New Todo"><br>
+            <input type="submit" value="Save">
         </form>
 
         <h2> List of Todos </h2>
